@@ -1,0 +1,56 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Tính Khoảng Cách</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript">
+			function calculate() {
+				d = parseInt(document.getElementById('d').value);
+				itemD = parseFloat(document.getElementById('item-d').value);
+				count = parseInt(document.getElementById('count').value);
+				result = ((d - itemD*count)/(count+1)).toFixed(1);
+				document.getElementById('result').innerHTML = result
+			}        	
+        </script>
+        <style type="text/css">
+        	* {
+        		margin: 0;
+        		padding: 0;
+        	}
+        	.container {
+        		display: flex;
+        		width: 200px;
+        		flex-direction: column;
+        		margin:  auto;
+        		padding: 10px;
+        	}
+        	.container > input {
+        		margin-bottom: 5px;
+        		padding: 5px;
+        	}
+        	.submit {
+        		background: #2196f3;
+        		color: #fff;
+        		border:  none;
+        		border-radius: 3px;
+        		padding:  5px;
+        	}
+        	.submit:active {
+        		background: #1769aa;
+        	}
+        </style>
+    </head>
+    <body>
+    	<div class="container">
+    		<strong>Tính khoảng cách thanh</strong>
+	        <input type="text" id="d" placeholder="Chiều rộng"/>
+	        <input type="text" id="item-d" placeholder="Độ rộng thanh"/>
+	        <input type="text" id="count" placeholder="Số thanh"/>
+	        <input type="button" onclick="calculate()" value="Tính" class="submit" />
+	        <label>Khoảng cách: <strong id="result"></strong></label>
+        </div>
+    </body>
+</html>
